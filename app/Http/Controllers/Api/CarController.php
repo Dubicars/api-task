@@ -18,4 +18,12 @@ class CarController extends Controller
         return Car::query()
             ->paginate($limit);
     }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(Car $car)
+    {
+        return response()->json($car);
+    }
 }
